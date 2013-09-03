@@ -182,4 +182,6 @@ input[type="email"] {
 	font-size: 0.8em;
  }
  #response{font-size:1em; }
+#download {display: block;height: 150px;width: 100%;}
+#download li a{display:inline-block;width:15%;color:#FFF;background-color:#138B96;padding:1em 2em;margin-top:6px;line-height:0.8em;font-size:0.8em;;text-align:center;text-decoration:none}
 }
