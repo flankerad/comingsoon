@@ -1,4 +1,4 @@
-## Comingsoon Page
+Comingsoon Page
 ==========
 
 Awesome coming soon splash page with email signup.
