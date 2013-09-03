@@ -1,1 +1,125 @@
-coming soon github page
+<!--
+ Awesome ComingSoonPage
+ Copyright (c) 2013 flankerad
+ Awesome ComingSoonPage is open sourced under the MIT license.
+ Awesome ComingSoonPage uses:
+ jQuery.html5form by http://www.matiasmancini.com.ar/ for form validation
+ BEBAS NEUE Dharma Type http://dharmatype.com/ 
+ http://www.fontsquirrel.com/license/bebas-neue
+ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FlankerWorks</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Awesome Coming Soon Page by FlankerWorks" />
+        <meta name="keywords" content="Comping soon landing splash page" />
+        <meta name="author" content="FlankerWorks" />        
+        <link rel="stylesheet" type="text/css" href="css/comingsoon.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            
+            <h1 class="main">Coming Soon</h1>
+			<div class="container">
+				<div class="content">
+					<h2 class="frame1">This is</h2><!--Your SLOGANS if you can't think-->
+					<h2 class="frame2">Ready to Use</h2>
+					<h2 class="frame3">Coming soon page</h2>
+					<h2 class="frame4">For your awesome company!!</h2>
+					<h2 class="frame5"><span class="frame6">Flanker</span><span class="frame7">.co</span><span class="frame8">.vu</span></h2>
+					
+					<div id="contact-form" class="form-wrapper">
+    					<form id="mail-me" action="process.php" method='POST'>
+                         
+                        <div id="response"></div>  
+
+                         <label id="label" for="email">On launch</label>
+                         <input type="email" name="email" id="email" title="Email address" maxlength="40" placeholder="yourname@domain.com" required/>
+                         <input type="submit" name="submit" id="submit" value="MAIL ME !" />
+                         
+    				    </form> 
+				    </div>
+					
+				</div>
+	        
+			</div>
+        </div>
+		
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/html5form.min.js"></script> 
+<script>
+    $(document).ready(function(){
+        $('#mail-me').html5form({
+        allBrowsers: true,
+        responseDiv : '#response',
+        colorOn: '#0D85A5',
+        messages : 'en',
+        emailMessage : 'This email address is not correct, please try again',
+        method : 'POST',
+        action : 'process.php'
+        }); 
+
+        
+    });
+</script>
+
+<script type="text/javascript">
+$(function() {
+        $('.frame1').animate({opacity: 1}, 1000, function(){
+
+             $('.frame1').animate({opacity: 0}, 1500, function(){
+
+                 $('.frame2').animate({opacity: 1}, 1000, function(){
+
+                     $('.frame2').animate({opacity: 0}, 1500, function(){
+
+                        $('.frame3').animate({opacity: 1}, 1000, function(){
+
+                            $('.frame3').animate({opacity: 0},1500, function(){
+
+                                 $('.frame4').animate({opacity: 1}, 1000, function(){
+                                     
+                                     $('.frame4').animate({opacity: 0}, 1500, function(){
+
+                                         $('.frame5').animate({opacity: 1}, 0, function(){
+
+                                                $('.frame6').animate({opacity: 1}, 1000);
+
+                                                $('.frame7').animate({opacity: 1}, 3000);
+
+                                                $('.frame8').animate({opacity: 1}, 4000, function(){ 
+
+                                                    $('.main').animate({opacity: 1}, 800, function(){
+                                                        $('#contact-form').animate({opacity: 1}, 1500);                                               
+                                                       
+                                             
+                                                     }); 
+                                               
+                                                 });                                                 
+
+                                             });
+
+                                         }); 
+
+                                     });
+                                                                        
+                                 });
+
+                             }); 
+
+                         });
+
+                     });
+
+                 });
+
+             });
+        });       
+    
+</script>
+
+</body>
+</html>
