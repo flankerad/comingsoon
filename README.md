@@ -8,7 +8,9 @@ PHP backend and MySql database.
 
 _*Compatible across browsers*_
  	
->		Fill in server details and edit text and deploy.
+>		Fill in server details
+>		Edit text.
+>		Ready to deploy.
 
 
 _*Works on mobile devices, though some minute glitches may occur in special cases*_
