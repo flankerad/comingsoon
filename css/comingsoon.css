@@ -135,11 +135,14 @@ font-family: 'BebasNeueRegular';
 #submit:active{ background: #37853A;}
 
 /* For Download Nav*/
-#download {display: block;height: 150px;width: 100%;position: absolute;z-index: 5000;margin-left: 1%;margin-top: 4%;min-width: 100px;}
+#download {display: block;height: 150px;width: 98%;position: absolute;z-index: 5000;margin-left: 1%;margin-top: 4%;min-width: 100px;}
 #download ul { list-style: none}
 #download li a{font-family: 'Economica', sans-serif;display:inline-block;width:5%;color:#FFF;-moz-border-radius:2px;-webkit-border-radius:2px;-o-border-radius:2px;-ms-border-radius:2px;-khtml-border-radius:2px;border-radius:2px;-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.3),0 3px 7px rgba(0,0,0,0.7);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.3),0 3px 7px rgba(0,0,0,0.7);-o-box-shadow:inset 0 1px 0 rgba(255,255,255,0.3),0 3px 7px rgba(0,0,0,0.7);box-shadow:inset 0 1px 0 rgba(255,255,255,0.3),0 3px 7px rgba(0,0,0,0.7);background-color:#138B96;padding:1em 2em;margin-top:6px;line-height:14px;font-size:14px;display:inline-block;text-align:center;text-decoration:none}
 #download li a:hover{background-color:#1DC4CA;-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.2),0 1px 0 rgba(0,0,0,0);-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.2),0 1px 0 rgba(0,0,0,0);-o-box-shadow:inset 0 1px 1px rgba(0,0,0,0.2),0 1px 0 rgba(0,0,0,0);box-shadow:inset 0 1px 1px rgba(0,0,0,0.2),0 1px 0 rgba(0,0,0,0)}
 /* End Download Nav */
+.author{font-size:100%;text-align:center;display:block;padding-top:1em;clear:both;padding-top: 2%;color: #fff;position: fixed;top:90%;}
+.author a{text-decoration:none;color:#00a8eb}
+.author a:hover{text-decoration:none;color:#fff}
 
 @media only screen and (max-width:480px){
 html,body{font-size:13px}
