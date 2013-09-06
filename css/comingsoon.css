@@ -10,7 +10,7 @@
 
 }
 body {
-	background: #310404 url(../background.png) repeat;
+	background: #041f31;
 	font-family: 'BebasNeueRegular';
 }
 
@@ -134,6 +134,9 @@ font-family: 'BebasNeueRegular';
 }
 #submit:active{ background: #37853A;}
 
+.author{font-size:100%;text-align:center;display:block;padding-top:1em;clear:both;padding-top: 2%;color: #fff;position: fixed;top:90%;}
+.author a{text-decoration:none;color:#00a8eb}
+.author a:hover{text-decoration:none;color:#fff}
 
 @media only screen and (max-width:480px){
 html,body{font-size:13px}
