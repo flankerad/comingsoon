@@ -1,44 +1,37 @@
 <?php
-// Get Data	
-
-session_start();
-//connect.php
-$server	    = 'localhost';//Enter name of your database server generally its same
-$username	= '';//Enter your username
-$password	= '';//Enter your database password
+//-- database connection information
+$server	    = 'localhost'; 
+$username	= '';
+$password	= '';
+$database 	= 'launch_email'; 	//-- database should really be created manually.
 
 
-if(!mysql_connect($server, $username, $password))
+try
 {
- 	exit('Error: Oops! something went wrong please visit after a while');
+	$dbh = new PDO("mysql:host=$server;dbname=$database", $username, $password);
+
+	//-- create table
+	$dbh->query("CREATE TABLE IF NOT EXISTS `$database`.`mail` (
+					`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+					`email` VARCHAR(255) NOT NULL
+				) 
+				ENGINE = MyISAM")
+
+	$dbh->prepare('INSERT INTO mail VALUES ('', :?)');
+	$dbh->execute(array($_POST['email']));
+
+	//-- DO NOT USE BELOW CODE AS-IS!
+	//-- Very easy for someone to use this form to send spam.
+
+	/*/ Send Message
+	mail( "yournameeeee@gmail.com", "Contact Form Submission",
+	"Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $url\nMessage: $message\n",
+	"From: Forms <forms@example.net>" );*/
 }
-
-   $email = strip_tags($_POST['email']);
-
-   $db = mysql_query("CREATE DATABASE IF NOT EXISTS `launch_email`");
-
-    if(!$db)	
-	
-	{ exit('Error: Oops! something went wrong please visit after a while');}
-	
-	else
-     {		
-       mysql_select_db("launch_email");
-					
-       $sql = mysql_query("CREATE TABLE IF NOT EXISTS `launch_email`.`mail`(`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-                    `email` VARCHAR(50) NOT NULL)
-					 ENGINE = MyISAM") or die(mysql_error());
-								
-
-
-					 $insert = mysql_query("INSERT INTO mail VALUES ('','$email') ") or die (mysql_error());
-				    
-		}			 
-				
-/*/ Send Message
-mail( "yournameeeee@gmail.com", "Contact Form Submission",
-"Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $url\nMessage: $message\n",
-"From: Forms <forms@example.net>" );*/
+catch (PDOException $ex)
+{
+	echo "Database Error: " . $ex->getMessage();
+}
 ?>
 <style>
 	#label, #email, #submit { display: none;}
